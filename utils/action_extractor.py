@@ -8,7 +8,10 @@ import ssl
 # Disable SSL verification for nltk data downloads
 ssl._create_default_https_context = ssl._create_unverified_context
 
-nltk.download("punkt")
+try:
+    nltk.data.find("tokenizers/punkt")
+except LookupError:
+    nltk.download("punkt")
 # nltk.download('punkt_tab') # "punkt_tab" is a newer, more accurate version of the same tokenizer.
 
 ACTION_KEYWORDS = [
