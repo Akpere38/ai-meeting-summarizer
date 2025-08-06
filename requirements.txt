@@ -6,4 +6,3 @@ spacy>=3.7.4
 pandas>=2.2.2
 scikit-learn>=1.5.0
 vaderSentiment>=3.3.2
-sentencepiece>=0.2.0  # required for PEGASUS or other sentencepiece-based models
