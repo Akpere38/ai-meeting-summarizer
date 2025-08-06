@@ -1,6 +1,3 @@
-Here's a professional, recruiter- and developer-friendly `README.md` tailored for your **AI-Powered Meeting Summarizer** portfolio project:
-
----
 
 # 🧠 AI-Powered Meeting Summarizer
 
@@ -129,6 +126,3 @@ This is a **portfolio project** showcasing my skills in:
 * **Rapid prototyping** using Streamlit
 * **Clean code** and **modular design**
 
----
-
-Let me know if you'd like this turned into a downloadable `README.md` or hosted on GitHub with formatting!
