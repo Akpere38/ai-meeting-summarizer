@@ -4,15 +4,25 @@ import re
 import nltk
 from nltk.tokenize import sent_tokenize
 import ssl
+import os
 
 # Disable SSL verification for nltk data downloads
 ssl._create_default_https_context = ssl._create_unverified_context
 
+# Add relative path to nltk_data
+nltk_data_path = os.path.join(os.path.dirname(__file__), '..', 'nltk_data')
+nltk.data.path.append(nltk_data_path)
+
+# Explicitly tell NLTK where to look for resources
+nltk_data_path = os.path.join(os.path.dirname(__file__), '..', 'nltk_data')
+nltk.data.path.append(nltk_data_path)
+
+# Try to find 'punkt' tokenizer
 try:
     nltk.data.find("tokenizers/punkt")
 except LookupError:
-    nltk.download("punkt")
-# nltk.download('punkt_tab') # "punkt_tab" is a newer, more accurate version of the same tokenizer.
+    nltk.download("punkt", download_dir=nltk_data_path)
+
 
 ACTION_KEYWORDS = [
     "assign", "send", "schedule", "follow up", "prepare", "review",
